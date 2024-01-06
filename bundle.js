@@ -38,7 +38,7 @@ function resolveModule(currentPath, args) {
 
 	const out = path.join(currentPath, ...pathArgs);
 	console.log(out);
-	return out;
+	return out.split("\\").join("/");
 }
 
 const lua = bundle("./out/init.lua", {
